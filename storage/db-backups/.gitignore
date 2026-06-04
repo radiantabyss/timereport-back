@@ -1,0 +1,6 @@
+*
+!.gitignore
+!daily/
+!every_10_minutes/
+!hourly/
+!monthly/

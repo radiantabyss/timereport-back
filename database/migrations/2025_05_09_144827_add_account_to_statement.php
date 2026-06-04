@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::table('statement', function (Blueprint $table) {
+            $table->string('account')->after('created_by');
+            $table->string('currency')->after('amount');
+            $table->dropColumn('invoice_id');
+            $table->dropColumn('expense_id');
+            $table->dropColumn('withdrawal_id');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::table('statement', function (Blueprint $table) {
+            $table->dropColumn('account');
+            $table->dropColumn('currency');
+            $table->integer('invoice_id');
+            $table->integer('expense_id');
+            $table->integer('withdrawal_id');
+        });
+    }
+};

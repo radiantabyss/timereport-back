@@ -1,0 +1,10 @@
+/node_modules
+/vendor
+npm-debug.log
+yarn-error.log
+.phpunit.result.cache
+.phpunit.cache
+ip.txt
+env.php
+.ra
+/a

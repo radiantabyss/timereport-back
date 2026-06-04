@@ -1,0 +1,11 @@
+*
+!app/
+!db-backups/
+!fonts/
+!framework/
+!geoip/
+!logs/
+!puppeteer/
+!test/
+!efactura/
+!.gitignore
